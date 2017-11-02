@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.brazilquiz.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:text="@string/voc_conhece_o_brasil_n_responda_as_perguntas_abaixo"
+        android:textSize="24sp" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                style="@style/enunciado"
+                android:text="@string/_1_qual_a_capital_do_brasil" />
+
+            <RadioGroup style="@style/botoesRadio">
+
+                <RadioButton
+                    android:id="@+id/radio_brasilia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/brasilia" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fortaleza" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/belo_horizonte" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/jo_o_pessoa" />
+
+            </RadioGroup>
+
+            <TextView
+                style="@style/enunciado"
+                android:text="@string/_2_qual_o_maior_rio_do_brasil" />
+
+            <RadioGroup style="@style/botoesRadio">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rio_s_o_francisco" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rio_jaguaribe" />
+
+                <RadioButton
+                    android:id="@+id/radio_amazonas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rio_amazonas" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rio_coc" />
+
+            </RadioGroup>
+
+            <TextView
+                style="@style/enunciado"
+                android:text="@string/_3_qual_a_capital_do_estado_do_cear" />
+
+            <EditText
+                android:id="@+id/capitalDoCeara"
+                style="@style/tamanhoEditText"
+                android:inputType="text"
+                android:keyboardNavigationCluster="false" />
+
+            <TextView
+                style="@style/enunciado"
+                android:text="@string/_4_qual_o_esporte_mais_popular_do_brasil" />
+
+            <EditText
+                android:id="@+id/esporteMaisPopular"
+                style="@style/tamanhoEditText" />
+
+            <TextView
+                style="@style/enunciado"
+                android:text="@string/_5_qual_a_maior_cidade_do_brasil" />
+
+            <RadioGroup style="@style/botoesRadio">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="middle"
+                    android:text="@string/brasilia" />
+
+                <RadioButton
+                    android:id="@+id/radio_sao_paulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/s_o_paulo" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/porto_alegre" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/palmas" />
+
+            </RadioGroup>
+
+            <TextView
+                style="@style/enunciado"
+                android:text="@string/_6_quais_os_tr_s_principais_rios_do_brasil" />
+
+            <CheckBox
+                android:id="@+id/check_amazonas"
+                style="@style/layoutCheckBox"
+                android:text="@string/amazonas" />
+
+            <CheckBox
+                android:id="@+id/check_parana"
+                style="@style/layoutCheckBox"
+                android:text="@string/paran" />
+
+            <CheckBox
+                android:id="@+id/check_madeira"
+                style="@style/layoutCheckBox"
+                android:text="@string/madeira" />
+
+
+            <CheckBox
+                style="@style/layoutCheckBox"
+                android:text="@string/jaguaribe" />
+
+
+            <TextView
+                style="@style/enunciado"
+                android:text="@string/_7_o_brasil_o_maior_pa_s_do_mundo_em_territ_rio" />
+
+            <RadioGroup
+                style="@style/botoesRadio"
+                android:orientation="horizontal">
+
+                <RadioButton
+                   android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sim" />
+
+                <RadioButton
+                    android:id="@+id/territorioNao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/n_o" />
+            </RadioGroup>
+
+
+            <TextView
+                style="@style/enunciado"
+                android:text="@string/_8_qual_a_capital_do_brasil"
+                />
+            <RadioGroup
+                android:orientation="horizontal"
+                style="@style/botoesRadio" >
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/aquiraz"
+                    />
+
+
+                <RadioButton
+                    android:id="@+id/capitalBrasilia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/brasilia"
+                    />
+
+            </RadioGroup>
+
+
+            <TextView
+                style="@style/enunciado"
+                android:text="@string/_9_s_o_2_cores_da_bandeira_do_brasil"
+                />
+            <CheckBox
+                style="@style/layoutCheckBox"
+                android:text="@string/vermelho"
+                />
+            <CheckBox
+                android:id="@+id/check_bandeira_azul"
+                style="@style/layoutCheckBox"
+                android:text="@string/azul"
+                />
+            <CheckBox
+                style="@style/layoutCheckBox"
+                android:text="@string/preto"
+                />
+            <CheckBox
+                android:id="@+id/check_bandeira_verde"
+                style="@style/layoutCheckBox"
+                android:text="@string/verde"
+                />
+
+            <TextView
+                style="@style/enunciado"
+                android:text="@string/_10_quantas_estrelas_existem_na_bandeira_do_brasil"
+                />
+
+            <RadioGroup
+                style="@style/botoesRadio"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:text="@string/_23_estrelas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:id="@+id/radio_27_estrelas"
+                    android:text="@string/_27_estrelas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+            </RadioGroup>
+
+
+            <Button
+                android:id="@+id/button_enviar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="enviarRespostas"
+                android:text="@string/enviar_respostas" />
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>
+
