@@ -149,6 +149,7 @@
                 android:text="@string/madeira" />
 
             <CheckBox
+                android:id="@+id/check_jaguaribe"
                 style="@style/layoutCheckBox"
                 android:text="@string/jaguaribe" />
 
@@ -198,6 +199,7 @@
                 android:text="@string/_9_s_o_2_cores_da_bandeira_do_brasil" />
 
             <CheckBox
+                android:id="@+id/check_bandeira_vermelho"
                 style="@style/layoutCheckBox"
                 android:text="@string/vermelho" />
 
@@ -207,6 +209,7 @@
                 android:text="@string/azul" />
 
             <CheckBox
+                android:id="@+id/check_bandeira_preto"
                 style="@style/layoutCheckBox"
                 android:text="@string/preto" />
 

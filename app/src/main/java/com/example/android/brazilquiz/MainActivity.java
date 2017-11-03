@@ -59,7 +59,8 @@ public class MainActivity extends AppCompatActivity {
         CheckBox amazonasCheck = (CheckBox) findViewById(R.id.check_amazonas);
         CheckBox parana = (CheckBox) findViewById(R.id.check_parana);
         CheckBox madeira = (CheckBox) findViewById(R.id.check_madeira);
-        if (amazonasCheck.isChecked() && parana.isChecked() && madeira.isChecked()) {
+        CheckBox jaguaribe = (CheckBox) findViewById(R.id.check_jaguaribe);
+        if (amazonasCheck.isChecked() && parana.isChecked() && madeira.isChecked() && !jaguaribe.isChecked()) {
             score += 1;
         }
 
@@ -78,7 +79,9 @@ public class MainActivity extends AppCompatActivity {
         // Pergunta 9. Duas Cores da Bandeira do brasil
         CheckBox azul = (CheckBox) findViewById(R.id.check_bandeira_azul);
         CheckBox verde = (CheckBox) findViewById(R.id.check_bandeira_verde);
-        if (azul.isChecked() && verde.isChecked()) {
+        CheckBox preto = (CheckBox) findViewById(R.id.check_bandeira_preto);
+        CheckBox vermelho = (CheckBox) findViewById(R.id.check_bandeira_vermelho);
+        if (azul.isChecked() && verde.isChecked() && !preto.isChecked() && !vermelho.isChecked()) {
             score += 1;
         }
 
@@ -87,21 +90,19 @@ public class MainActivity extends AppCompatActivity {
         if (estrelas27.isChecked()) {
             score += 1;
         }
-
         return score;
     }
 
     public void enviarRespostas(View view) {
         int score = verificaRespostas();
         if (score == 0) {
-            Toast.makeText(this, "Péssimo desempenho, não acertou nada!", Toast.LENGTH_LONG).show();
-
+            Toast.makeText(this, "Você não acertou nada!, leia mais sobre o Brasil !", Toast.LENGTH_LONG).show();
         } else if (score == 10) {
-            Toast.makeText(this, "Parabéns, você acertou tudo  !!", Toast.LENGTH_SHORT).show();
-        } else if (score > 0 && score < 5) {
-            Toast.makeText(this, "Conheça precisa conhecer o Brasil. Acertou só " + score + " perguntas", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Parabéns, " + score + " acertos ! \n você gabaritou o Quiz  !!", Toast.LENGTH_SHORT).show();
+        } else if (score > 0 && score <= 6) {
+            Toast.makeText(this, "Somente " + score + " acerto(s). Você precisa conhecer mais o Brasil. ", Toast.LENGTH_LONG).show();
         } else {
-            Toast.makeText(this, "Faltou pouco: " + score + " Acertos !", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, score + " Acertos, " + " faltou pouco para completar o quiz", Toast.LENGTH_SHORT).show();
         }
     }
 }
