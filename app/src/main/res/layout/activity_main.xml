@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -17,7 +15,6 @@
         android:text="@string/voc_conhece_o_brasil_n_responda_as_perguntas_abaixo"
         android:textSize="24sp" />
 
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -26,7 +23,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
 
             <TextView
                 style="@style/enunciado"
@@ -93,8 +89,7 @@
             <EditText
                 android:id="@+id/capitalDoCeara"
                 style="@style/tamanhoEditText"
-                android:inputType="text"
-                android:keyboardNavigationCluster="false" />
+                android:inputType="text" />
 
             <TextView
                 style="@style/enunciado"
@@ -153,11 +148,9 @@
                 style="@style/layoutCheckBox"
                 android:text="@string/madeira" />
 
-
             <CheckBox
                 style="@style/layoutCheckBox"
                 android:text="@string/jaguaribe" />
-
 
             <TextView
                 style="@style/enunciado"
@@ -179,77 +172,69 @@
                     android:text="@string/n_o" />
             </RadioGroup>
 
-
             <TextView
                 style="@style/enunciado"
-                android:text="@string/_8_qual_a_capital_do_brasil"
-                />
+                android:text="@string/_8_qual_a_capital_do_brasil" />
+
             <RadioGroup
-                android:orientation="horizontal"
-                style="@style/botoesRadio" >
+                style="@style/botoesRadio"
+                android:orientation="horizontal">
 
                 <RadioButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/aquiraz"
-                    />
-
+                    android:text="@string/aquiraz" />
 
                 <RadioButton
                     android:id="@+id/capitalBrasilia"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/brasilia"
-                    />
+                    android:text="@string/brasilia" />
 
             </RadioGroup>
 
-
             <TextView
                 style="@style/enunciado"
-                android:text="@string/_9_s_o_2_cores_da_bandeira_do_brasil"
-                />
+                android:text="@string/_9_s_o_2_cores_da_bandeira_do_brasil" />
+
             <CheckBox
                 style="@style/layoutCheckBox"
-                android:text="@string/vermelho"
-                />
+                android:text="@string/vermelho" />
+
             <CheckBox
                 android:id="@+id/check_bandeira_azul"
                 style="@style/layoutCheckBox"
-                android:text="@string/azul"
-                />
+                android:text="@string/azul" />
+
             <CheckBox
                 style="@style/layoutCheckBox"
-                android:text="@string/preto"
-                />
+                android:text="@string/preto" />
+
             <CheckBox
                 android:id="@+id/check_bandeira_verde"
                 style="@style/layoutCheckBox"
-                android:text="@string/verde"
-                />
+                android:text="@string/verde" />
 
             <TextView
                 style="@style/enunciado"
-                android:text="@string/_10_quantas_estrelas_existem_na_bandeira_do_brasil"
-                />
+                android:text="@string/_10_quantas_estrelas_existem_na_bandeira_do_brasil" />
 
             <RadioGroup
                 style="@style/botoesRadio"
                 android:orientation="horizontal">
+
                 <RadioButton
-                    android:text="@string/_23_estrelas"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:text="@string/_23_estrelas" />
 
                 <RadioButton
                     android:id="@+id/radio_27_estrelas"
-                    android:text="@string/_27_estrelas"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
+                    android:layout_height="wrap_content"
+                    android:text="@string/_27_estrelas" />
 
             </RadioGroup>
-
 
             <Button
                 android:id="@+id/button_enviar"
@@ -258,13 +243,7 @@
                 android:onClick="enviarRespostas"
                 android:text="@string/enviar_respostas" />
 
-
-
         </LinearLayout>
-
-
     </ScrollView>
-
-
 </LinearLayout>
 
