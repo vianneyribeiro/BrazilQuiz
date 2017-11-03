@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int score;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +20,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void verificaRespostas() {
+    public int verificaRespostas() {
+
+        int score = 0;
 
         //Pergunta 1. Qual a capital do Brasil
         RadioButton brasilia = (RadioButton) findViewById(R.id.radio_brasilia);
@@ -36,14 +38,14 @@ public class MainActivity extends AppCompatActivity {
 
         // Pergunta 3. Qual a Capital do Estado do Ceará
         EditText capital = (EditText) findViewById(R.id.capitalDoCeara);
-        if (capital.getText().toString().equals("fortaleza")) {
+        if (capital.getText().toString().equalsIgnoreCase("fortaleza")) {
             score += 1;
         }
-        ;
+
 
         // Pergunta 4. Esporte mais popular
         EditText esporte = (EditText) findViewById(R.id.esporteMaisPopular);
-        if (esporte.getText().toString().equals("futebol")) {
+        if (esporte.getText().toString().equalsIgnoreCase("futebol")) {
             score += 1;
         }
 
@@ -85,10 +87,12 @@ public class MainActivity extends AppCompatActivity {
         if (estrelas27.isChecked()) {
             score += 1;
         }
+
+        return score;
     }
 
     public void enviarRespostas(View view) {
-        verificaRespostas();
+        int score = verificaRespostas();
         if (score == 0) {
             Toast.makeText(this, "Péssimo desempenho, não acertou nada!", Toast.LENGTH_LONG).show();
 
